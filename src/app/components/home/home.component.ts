@@ -9,10 +9,16 @@ import { DataService } from '../../service/data.service';
 export class HomeComponent implements OnInit {
 
   pais: any;
+  nuevosLanzamientos:any[]=[];
+
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getMusica().subscribe((data:any)=>{
+      this.nuevosLanzamientos = data.albums.items;
+      
+    })
     this.dataService.getPais().subscribe( data => {
       this.pais = data;
     });

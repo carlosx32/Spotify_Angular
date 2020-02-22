@@ -11,6 +11,7 @@ import { ROUTES } from './app.routes';
 
 //http
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriasComponent } from './components/categorias/categorias.component';
 
 
 
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
